@@ -1,0 +1,47 @@
+---
+title: "GITHUB PRAC CLASSWORK WEEK 7"
+author: "Pavan Patel (Data Science)"
+date: "2024-02-27"
+output:
+  html_document: default
+---
+
+```{r setup, include=FALSE, message=FALSE, warning=FALSE}
+
+library(tidyverse)
+library(DT)
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### QUESTION 1: Activate the Diamonds Git Hub Practice Rfile on Canvas and save the file to your Desktop. As demonstrated in class, upload this file to one of your Git Hub repositories, and then screenshot the GitHub page showing that the upload was successful.
+
+```{r}
+data("diamonds")
+```
+
+![File Saved](week7.a.1.png)
+
+![Upload File](week7.a.2.png)
+
+![Successful Upload](week7.a.3.png)
+
+### QUESTION 2: In GitHub, edit the Git Hub Practice Rfile, showing code that will only output variables x,y, and z. Also, exactly 30 rows are to be printed.
+
+```{r, warning=FALSE}
+diamonds %>%
+  select(price, x, y, z) %>%
+  head(30) -> d1
+
+datatable(d1, options = list(pageLength = 5))
+```
+
+### QUESTION 3: Go to Git Hub and delete a repository. Screenshot your git hub page showing the repository and then post a screenshot showing that the repository has been deleted.
+
+![Delete File](week7.b.1.png)
+
+![Confirming the changes File](week7.b.2.png)
+
+### QUESTION 4: For any of your repos, screen shot a page showing any file, then screen shot the same page showing that the file has been deleted.
+
+![Confirming the File Delete](week7.c.1.png)
